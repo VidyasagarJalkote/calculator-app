@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <main class="calc">
+    <div class="display">
+      <div id="expr" class="expr"></div>
+      <div id="result" class="result">0</div>
+    </div>
+
+    <div class="keys" id="keys">
+      <button class="fn" data-action="clear">AC</button>
+      <button class="fn" data-action="back" aria-label="Backspace">⌫</button>
+      <button class="fn" data-action="percent">%</button>
+      <button class="op" data-key="÷">÷</button>
+
+      <button data-key="7">7</button>
+      <button data-key="8">8</button>
+      <button data-key="9">9</button>
+      <button class="op" data-key="×">×</button>
+
+      <button data-key="4">4</button>
+      <button data-key="5">5</button>
+      <button data-key="6">6</button>
+      <button class="op" data-key="−">−</button>
+
+      <button data-key="1">1</button>
+      <button data-key="2">2</button>
+      <button data-key="3">3</button>
+      <button class="op" data-key="+">+</button>
+
+      <button class="zero" data-key="0">0</button>
+      <button data-key=".">.</button>
+      <button class="op eq" data-action="equals">=</button>
+    </div>
+  </main>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
